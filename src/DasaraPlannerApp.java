@@ -1,3 +1,6 @@
+//Using ArrayList to store the collection of events.
+import java.util.ArrayList;
+
 
 public class DasaraPlannerApp{
     public static void main(String[] args){
