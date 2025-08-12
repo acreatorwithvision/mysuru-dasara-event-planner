@@ -2,8 +2,8 @@ public class TicketedEvent extends Event{
     double ticketPrice;
 
     //contructor for class TicketedEvent
-    public TicketedEvent(String eventName, String venue, String eventDate, EventType type){
-        super(eventname,venue,eventDate,type); //call parent contructor
+    public TicketedEvent(String eventName, String venue, String eventDate, EventType type,double ticketPrice){
+        super(eventName,venue,eventDate,type); //call parent contructor
         this.ticketPrice=ticketPrice;
     }
 

@@ -17,6 +17,7 @@ public class Event{
         System.out.println("Event: "+this.eventName + "("+this.type+")");
         System.out.println(" Venue: "+this.venue);
         System.out.println(" Date: "+this.eventDate);
+        System.out.println("Type: "+this.type);
     }
 }
 
