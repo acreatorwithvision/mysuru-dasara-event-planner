@@ -1,6 +1,8 @@
 //Using ArrayList to store the collection of events.
 import java.util.ArrayList;
 import java.util.Scanner; //Scanner class for user input
+import java.io.FileWriter; // to write on files
+import java.io.IOException; //to handle errors on files
 
 public class DasaraPlannerApp{
     public static void main(String[] args){
@@ -19,26 +21,29 @@ public class DasaraPlannerApp{
 
         //By default since isRunning is true, the program runs with the choice selector
         while(isRunning) {
-            System.out.println("1. View all events");
-            System.out.println("2. Exit");
+            System.out.println("1. View all events"); //view events
+            System.out.println("2. Register for an event"); //register to an event
+            System.out.println("2. Exit"); //exit from main menu and program
             System.out.println("Enter your choice");
 
 
             //Asking for an int input 1 or 2 from user
             int choice = scanner.nextInt();
+            scanner.nextLine(); //consume the leftover newline character
+
             System.out.println("\n");
             if (choice == 1) {
                 System.out.println("All the Dasara events this year\n");
-                for (Event event : events) {
-                    System.out.println("Event Name:" + event.eventName);
-                    System.out.println("Event Venue:" + event.venue);
-                    System.out.println("Event Date:" + event.eventDate);
+                for (int i=0;i<events.size();i++) {
+                    System.out.println("Event #"+(i+1));
+                    events.get(i).displayDetails();
                     System.out.println("--------------");
                 }
             }
             else if(choice==2){
-                System.out.println("Thanks for using Dasara Planner, Goodbye");
-                isRunning=false;
+                //Registration block
+                System.out.println("Enter your name");
+                String visitorName=scanner.nextLine();
             }
             else {
                 System.out.println("Invalid option, try again");
