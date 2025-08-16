@@ -44,6 +44,9 @@ public class DasaraPlannerApp{
                 //Registration block
                 System.out.println("Enter your name");
                 String visitorName=scanner.nextLine();
+
+                System.out.println("Enter the Event # you want to register for:");
+                int eventNumber = scanner.nextInt();
             }
             else {
                 System.out.println("Invalid option, try again");
