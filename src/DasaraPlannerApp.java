@@ -23,7 +23,7 @@ public class DasaraPlannerApp{
         while(isRunning) {
             System.out.println("1. View all events"); //view events
             System.out.println("2. Register for an event"); //register to an event
-            System.out.println("2. Exit"); //exit from main menu and program
+            System.out.println("3. Exit"); //exit from main menu and program
             System.out.println("Enter your choice");
 
 
@@ -58,7 +58,7 @@ public class DasaraPlannerApp{
                     //"true" flag sets the program to append to the file not overwrite it.
 
                     try(FileWriter writer=new FileWriter("registrations.txt",true)){
-                        writer.write("Visitor: "+ visitorName +", Event: "+ selectedEvent.EventName +"\n");
+                        writer.write("Visitor: "+ visitorName +", Event: "+ selectedEvent.eventName +"\n");
                         System.out.println("Registration complete..! Your details are saved.");
                     }
                     catch(IOException e){
@@ -74,7 +74,7 @@ public class DasaraPlannerApp{
             }
             else if(choice==3){
                 isRunning=false;
-                System.out.println("Thanks for using Namma Mysuru Dasara Planner. GoodBye!")
+                System.out.println("Thanks for using Namma Mysuru Dasara Planner. GoodBye!");
             }
             else {
                 System.out.println("Invalid option, try again");
