@@ -1,4 +1,5 @@
 **🐘 Mysuru Dasara Event Planner**
+
 A simple command-line (CLI) application for tracking and registering for Mysuru Dasara events. This project is a practical demonstration of fundamental and intermediate Core Java concepts.
 
 *Features*
